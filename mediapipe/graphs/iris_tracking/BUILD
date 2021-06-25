@@ -84,3 +84,10 @@ mediapipe_binary_graph(
     output_name = "iris_tracking_gpu.binarypb",
     deps = [":iris_tracking_gpu_deps"],
 )
+
+mediapipe_binary_graph(
+    name = "iris_tracking_cpu_binary_graph",
+    graph = "iris_tracking_cpu.pbtxt",
+    output_name = "iris_tracking_cpu.binarypb",
+    deps = [":iris_tracking_cpu_deps"],
+)

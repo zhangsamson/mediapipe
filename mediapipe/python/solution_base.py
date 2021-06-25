@@ -237,7 +237,9 @@ class SolutionBase:
       self._modify_calculator_options(canonical_graph_config_proto,
                                       calculator_params)
     self._graph = calculator_graph.CalculatorGraph(
-        graph_config=canonical_graph_config_proto)
+        # graph_config=canonical_graph_config_proto
+        binary_graph_path=os.path.join(root_path, binary_graph_path)
+    )
     self._simulated_timestamp = 0
     self._graph_outputs = {}
 
